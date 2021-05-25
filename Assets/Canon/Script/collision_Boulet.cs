@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class collision_Boulet : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject explosion;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +21,7 @@ public class collision_Boulet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.name == "WaterProDaytime" || collision.collider.name == "Plane")
+        if (collision.collider.name == "Plane")
         {
             Debug.Log("Plouf");
             Destroy(gameObject);
@@ -26,6 +29,7 @@ public class collision_Boulet : MonoBehaviour
         else
         {
             Debug.Log("Boum");
+            GameObject e = Instantiate(explosion, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }
