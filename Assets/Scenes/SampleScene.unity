@@ -440,6 +440,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3594544579414818733, guid: 0f90bf1b9507a9a449daf5ee6bf86fd6,
+        type: 3}
+      propertyPath: m_MovingTurnSpeed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 3594544579414818733, guid: 0f90bf1b9507a9a449daf5ee6bf86fd6,
+        type: 3}
+      propertyPath: m_StationaryTurnSpeed
+      value: 35
+      objectReference: {fileID: 0}
     - target: {fileID: 7524582087092516098, guid: 0f90bf1b9507a9a449daf5ee6bf86fd6,
         type: 3}
       propertyPath: m_Name
@@ -448,7 +458,7 @@ PrefabInstance:
     - target: {fileID: 9158107243232516443, guid: 0f90bf1b9507a9a449daf5ee6bf86fd6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.32
       objectReference: {fileID: 0}
     - target: {fileID: 9158107243232516443, guid: 0f90bf1b9507a9a449daf5ee6bf86fd6,
         type: 3}
