@@ -17,8 +17,9 @@ GameObject:
   - component: {fileID: 7702271636181227259}
   - component: {fileID: 3594544579414818733}
   - component: {fileID: 4878140526925854873}
+  - component: {fileID: -3134967558722790214}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Bateau
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -179,3 +180,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 521b611700410be45810047f0a74e899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-3134967558722790214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7524582087092516098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d3ee06a4b175de47a240da255caba21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NbVies: 5
