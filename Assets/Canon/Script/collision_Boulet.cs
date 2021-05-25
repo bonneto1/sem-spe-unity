@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class collision : MonoBehaviour
+public class collision_Boulet : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -18,7 +18,7 @@ public class collision : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.collider.name == "WaterProDaytime")
+        if (collision.collider.name == "WaterProDaytime" || collision.collider.name == "Plane")
         {
             Debug.Log("Plouf");
             Destroy(gameObject);
