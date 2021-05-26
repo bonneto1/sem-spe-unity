@@ -21,16 +21,19 @@ public class collision_Boulet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.name == "Plane")
+        if (collision.collider.tag != "Canon")
         {
-            Debug.Log("Plouf");
-            Destroy(gameObject);
-        }
-        else
-        {
-            Debug.Log("Boum");
-            GameObject e = Instantiate(explosion, transform.position, transform.rotation);
-            Destroy(gameObject);
+            if (collision.collider.name == "Plane")
+            {
+                Debug.Log("Plouf");
+                Destroy(gameObject);
+            }
+            else
+            {
+                Debug.Log("Boum");
+                GameObject e = Instantiate(explosion, transform.position, transform.rotation);
+                Destroy(gameObject);
+            }
         }
     }
 }
