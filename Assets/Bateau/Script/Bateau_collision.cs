@@ -59,8 +59,9 @@ public class Bateau_collision : MonoBehaviour
             derniereTouche = Time.realtimeSinceStartup; 
 
         }
-        else if(collision.gameObject.tag == "Arrive")// et le timer pas fini 
+        else if(collision.gameObject.name == "ligne d'arrivee")// et le timer pas fini 
         {
+            Debug.Log("bou");
             GameObject m = Instantiate(menuVictoire, transform.position, transform.rotation);
             GameObject.Find("Main Camera").GetComponent<FollowCam>().enabled = false;
         }
