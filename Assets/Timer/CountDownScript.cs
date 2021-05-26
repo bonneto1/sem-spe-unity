@@ -11,7 +11,7 @@ public class CountDownScript : MonoBehaviour
     void Start()
     {
         StartCoroutine(timer());
-        time += 1;
+        
     }
 
 
@@ -19,15 +19,18 @@ public class CountDownScript : MonoBehaviour
     {
         while (time > 0)
         {
+            
             time--;
             yield return new WaitForSeconds(1f);
-            GetComponent<Text>().text = "Temps restant : "+string.Format("{0:0}:{1:00}", Mathf.Floor(time / 60), time % 60);
-
+            GetComponent<Text>().text = "Temps restant : " + string.Format("{0:0}:{1:00}", Mathf.Floor(time / 60), time % 60);
 
         }
         if (time == 0)
         {
+            GetComponent<Text>().text = "Temps restant : 0:00";
             Debug.Log("Fini");
+            StopCoroutine(timer());
+            GetComponent<CountDownScript>().enabled = false;
         }
 
     }
