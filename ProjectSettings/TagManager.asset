@@ -7,6 +7,7 @@ TagManager:
   - Canon
   - Obstacle
   - Bonus
+  - Arrive
   layers:
   - Default
   - TransparentFX
