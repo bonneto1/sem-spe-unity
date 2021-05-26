@@ -22,5 +22,7 @@ public class FollowCam : MonoBehaviour
 		}
 
 		else transform.LookAt(target, target.up);
+
+		
 	}
 }
