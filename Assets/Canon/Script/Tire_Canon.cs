@@ -26,7 +26,8 @@ public class Tire_Canon : MonoBehaviour
         if(intervalTire <= Time.realtimeSinceStartup - dernierTire)
         {
             Rigidbody b = Instantiate(Boulet, transform.position, transform.rotation);
-            b.velocity = transform.forward * this.vitesse;
+            b.velocity = -transform.forward * this.vitesse;
+            
 
             dernierTire = Time.realtimeSinceStartup;
         }
