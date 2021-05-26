@@ -14,7 +14,9 @@ public class Bateau_collision : MonoBehaviour
     [SerializeField]
     private int nbVies;
     [SerializeField]
-    private GameObject menu;
+    private GameObject menuDefaite;
+    [SerializeField]
+    private GameObject menuVictoire;
 
     // Start is called before the first frame update
     void Start()
@@ -49,13 +51,18 @@ public class Bateau_collision : MonoBehaviour
             nbCollisions += 1;
             if (nbCollisions >= nbVies)
             {
-                GameObject m = Instantiate(menu, transform.position, transform.rotation);
+                GameObject m = Instantiate(menuDefaite, transform.position, transform.rotation);
                 Destroy(gameObject);
                 GameObject.Find("Main Camera").GetComponent<FollowCam>().enabled = false;
             }
 
             derniereTouche = Time.realtimeSinceStartup; 
 
+        }
+        else if(collision.gameObject.tag == "Arrive")// et le timer pas fini 
+        {
+            GameObject m = Instantiate(menuVictoire, transform.position, transform.rotation);
+            GameObject.Find("Main Camera").GetComponent<FollowCam>().enabled = false;
         }
     }
 }
