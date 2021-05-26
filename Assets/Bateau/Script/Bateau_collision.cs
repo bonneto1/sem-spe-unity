@@ -33,7 +33,18 @@ public class Bateau_collision : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (intervalTire <= Time.realtimeSinceStartup - derniereTouche && collision.gameObject.name != "Plane")
+        if(collision.gameObject.tag == "Bonus")
+        {
+            if(gameObject.name == "Vie(Clone)")//hp up
+            {
+                nbVies += 1;
+            }
+           /* else if () //bonus temps
+            {
+
+            }*/
+        }
+        else if (intervalTire <= Time.realtimeSinceStartup - derniereTouche && collision.gameObject.tag == "Obstacle")
         {
             nbCollisions += 1;
             if (nbCollisions >= nbVies)
