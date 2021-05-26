@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 6226219038405203778}
   m_Layer: 0
   m_Name: herbe
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -651,7 +651,7 @@ GameObject:
   - component: {fileID: 4074142694096989279}
   m_Layer: 0
   m_Name: terre
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
