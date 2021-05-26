@@ -419,6 +419,7 @@ GameObject:
   - component: {fileID: 287687805}
   - component: {fileID: 287687804}
   - component: {fileID: 287687803}
+  - component: {fileID: 287687806}
   m_Layer: 5
   m_Name: BoutonJouer
   m_TagString: Untagged
@@ -537,6 +538,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 287687801}
   m_CullTransparentMesh: 0
+--- !u!114 &287687806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287687801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52de2df3cb92db54ea04113cc05f358a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_source: {fileID: 2203668490906801213, guid: 90b35367f47fb5c41abc2449fc153ca3,
+    type: 3}
 --- !u!1 &298961580
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,6 +834,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42ae392595fb1a74f8a642d69fdeb35f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_source: {fileID: 2203668490906801213, guid: 90b35367f47fb5c41abc2449fc153ca3,
+    type: 3}
 --- !u!1 &764238891
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Canon
   - Obstacle
+  - Bonus
   layers:
   - Default
   - TransparentFX
