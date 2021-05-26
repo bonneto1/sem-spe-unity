@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Tire_Canon : MonoBehaviour
 {
-    // Start is called before the first frame update
     [SerializeField]
     private int vitesse;
     [SerializeField]
@@ -14,10 +13,10 @@ public class Tire_Canon : MonoBehaviour
 
     private float dernierTire;
 
-
+    // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -28,7 +27,6 @@ public class Tire_Canon : MonoBehaviour
             Rigidbody b = Instantiate(Boulet, transform.position, transform.rotation);
             b.velocity = -transform.forward * this.vitesse;
             
-
             dernierTire = Time.realtimeSinceStartup;
         }
     }

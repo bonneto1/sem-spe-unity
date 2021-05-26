@@ -645,6 +645,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 111828338224363439, guid: 48696947a4bb68f4695cdb9070fb19ea,
+        type: 3}
+      propertyPath: AudioTire
+      value: 
+      objectReference: {fileID: 8300000, guid: 2df044c421af0d146b37d1c627641b54, type: 3}
+    - target: {fileID: 111828338224363439, guid: 48696947a4bb68f4695cdb9070fb19ea,
+        type: 3}
+      propertyPath: tire
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4969721678225375463, guid: 48696947a4bb68f4695cdb9070fb19ea,
         type: 3}
       propertyPath: m_LocalPosition.x
