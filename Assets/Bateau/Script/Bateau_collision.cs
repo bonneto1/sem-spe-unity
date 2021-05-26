@@ -40,6 +40,7 @@ public class Bateau_collision : MonoBehaviour
             {
                 GameObject m = Instantiate(menu, transform.position, transform.rotation);
                 Destroy(gameObject);
+                GameObject.Find("Main Camera").GetComponent<FollowCam>().enabled = false;
             }
 
             derniereTouche = Time.realtimeSinceStartup; 
