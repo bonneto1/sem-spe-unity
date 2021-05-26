@@ -21,7 +21,7 @@ public class CountDownScript : MonoBehaviour
         {
             time--;
             yield return new WaitForSeconds(1f);
-            GetComponent<Text>().text = string.Format("{0:0}:{1:00}", Mathf.Floor(time / 60), time % 60);
+            GetComponent<Text>().text = "Temps restant : "+string.Format("{0:0}:{1:00}", Mathf.Floor(time / 60), time % 60);
 
 
         }
