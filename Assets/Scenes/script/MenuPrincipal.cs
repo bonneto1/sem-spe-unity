@@ -13,7 +13,6 @@ public class MenuPrincipale : MonoBehaviour
 
     public void BoutonQuitter()
     {
-        Debug.Log("Pouf");
         Application.Quit();
     }
 }
