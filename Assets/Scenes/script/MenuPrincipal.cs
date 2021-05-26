@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenuPrincipale : MonoBehaviour
+public class MenuPrincipal : MonoBehaviour
 {
     
     public void BoutonJouer()
