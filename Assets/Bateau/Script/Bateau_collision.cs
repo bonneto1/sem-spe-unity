@@ -44,13 +44,14 @@ public class Bateau_collision : MonoBehaviour
         {
             time--;
             yield return new WaitForSeconds(1f);
-            GetComponent<Text>().text = "Temps restant : " + string.Format("{0:0}:{1:00}", Mathf.Floor(time / 60), time % 60);
-
 
         }
-        if (time == 0)
+        if (time <= 0)
         {
-            Debug.Log("Fini");
+            StopCoroutine(timer());
+            GameObject m = Instantiate(menuDefaite, transform.position, transform.rotation);
+            Destroy(gameObject);
+            GameObject.Find("Main Camera").GetComponent<FollowCam>().enabled = false;
         }
 
     }
@@ -71,7 +72,7 @@ public class Bateau_collision : MonoBehaviour
         else if (intervalTire <= Time.realtimeSinceStartup - derniereTouche && collision.gameObject.tag == "Obstacle")
         {
             nbCollisions += 1;
-            if (nbCollisions >= nbVies || time == 0)
+            if (nbCollisions >= nbVies)
             {
                 GameObject m = Instantiate(menuDefaite, transform.position, transform.rotation);
                 Destroy(gameObject);
