@@ -48,8 +48,8 @@ public class Bateau_collision : MonoBehaviour
         }
         else if (gameObject.scene.name == "ZoneCanyon")
         {
-            xPoussin = new List<int> { 0, 0, 0, 0, 0 };
-            zPoussin = new List<int> { 0, 0, 0, 0, 0 };
+            xPoussin = new List<int> { 64, 74, -138, 108, -107, 91, -119, 80, -66, 25 };
+            zPoussin = new List<int> { 17, -101, 27, -73, 28, 34, -23, 92, -119, 127 };
         }
         for (int i = 0; i < poussinARamasser; i++)
         {
