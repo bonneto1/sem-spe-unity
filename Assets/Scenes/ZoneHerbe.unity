@@ -1035,6 +1035,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2411392044587713338, guid: fb0819d802211c442abc4ad5e5345b6e,
         type: 3}
+    - target: {fileID: 6726439099598443027, guid: 622a64aa3bfbf3141a25cd5a864e9f81,
+        type: 3}
+      propertyPath: defaite
+      value: 
+      objectReference: {fileID: 717378415784138229, guid: 3930219515c6787438bbf36f8417ddc8,
+        type: 3}
+    - target: {fileID: 6726439099598443027, guid: 622a64aa3bfbf3141a25cd5a864e9f81,
+        type: 3}
+      propertyPath: victoire
+      value: 
+      objectReference: {fileID: 836978830398721197, guid: 1e413796082b272449a107954cdfe973,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 622a64aa3bfbf3141a25cd5a864e9f81, type: 3}
 --- !u!1 &563665542
@@ -2493,7 +2505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8fcfea15ec57b14abb4cbf343d5281f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 30
+  time: 15
 --- !u!114 &1789433666
 MonoBehaviour:
   m_ObjectHideFlags: 0
