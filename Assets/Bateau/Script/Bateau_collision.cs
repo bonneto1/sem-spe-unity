@@ -4,12 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
 public class Bateau_collision : MonoBehaviour
 {
     private int nbCollisions;
     private float intervalTire;
     private float derniereTouche;
-    
+    private int nbPoussins;
     
     [SerializeField]
     private int nbVies;
@@ -18,14 +19,13 @@ public class Bateau_collision : MonoBehaviour
     [SerializeField]
     private GameObject menuVictoire;
 
-
     // Start is called before the first frame update
     void Start()
     {
-        
         nbCollisions = 0;
         intervalTire = 3;
         derniereTouche = 0;
+        nbPoussins = 0;
         
     }
 
@@ -47,21 +47,27 @@ public class Bateau_collision : MonoBehaviour
     {
         if(collision.gameObject.tag == "Bonus")
         {
-            if(gameObject.name == "Vie(Clone)")//hp up
+            Debug.Log("BAM");
+            Destroy(collision.gameObject);
+            if (collision.gameObject.name == "coeur(Clone)")//hp up
             {
                 nbVies += 1;
             }
-           /* else if () //bonus temps
+            else if (collision.gameObject.name == "chrono") //bonus temps
             {
-
-            }*/
+                GameObject.Find("Text").GetComponent<CountDownScript>().time += 10;
+                Destroy(collision.gameObject);
+            }
+            else if (collision.gameObject.name == "poussin") // compteur de poussins
+            {
+                nbPoussins += 1;
+            }
         }
         else if (intervalTire <= Time.realtimeSinceStartup - derniereTouche && collision.gameObject.tag == "Obstacle")
         {
             nbCollisions += 1;
             if (nbCollisions >= nbVies)
             {
-              
                 GameObject m = Instantiate(menuDefaite, transform.position, transform.rotation);
                 Destroy(gameObject);
                 GameObject.Find("Main Camera").GetComponent<FollowCam>().enabled = false;

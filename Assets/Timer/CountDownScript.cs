@@ -15,7 +15,7 @@ public class CountDownScript : MonoBehaviour
     }
 
 
-    IEnumerator timer()
+    public IEnumerator timer()
     {
         while (time > 0)
         {
@@ -25,13 +25,7 @@ public class CountDownScript : MonoBehaviour
             GetComponent<Text>().text = "Temps restant : " + string.Format("{0:0}:{1:00}", Mathf.Floor(time / 60), time % 60);
 
         }
-        if (time == 0)
-        {
             GetComponent<Text>().text = "Temps restant : 0:00";
-            Debug.Log("Fini");
-            StopCoroutine(timer());
             GetComponent<CountDownScript>().enabled = false;
-        }
-
     }
 }
