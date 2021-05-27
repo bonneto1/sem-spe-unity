@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -72,10 +73,11 @@ public class Bateau_collision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!GameObject.Find("Text").GetComponent<CountDownScript>().isActiveAndEnabled)
+        if (!GameObject.Find("Text").GetComponent<CountDownScript>().isActiveAndEnabled && nbVies != 0 )
         {
-           
+            nbVies = 0;
             GameObject m = Instantiate(menuDefaite, transform.position, transform.rotation);
+            GameObject.Find("Score").GetComponent<TextMeshProUGUI>().text = "Vous n'avez pas sauvé tous les poussins\nIl en reste " + (poussinARamasser - nbPoussins) + " à trouver avant de rejoindre la ligne d'arrivée";
             Destroy(gameObject);
             GameObject.Find("Main Camera").GetComponent<FollowCam>().enabled = false;
         }
@@ -93,11 +95,6 @@ public class Bateau_collision : MonoBehaviour
                 nbVies += 1;
                 Destroy(collision.gameObject);
                 GameObject.Find("PanelVie (" + (nbVies-1) + ")").GetComponent<Image>().color = new Color(255, 255, 255, 255);
-
-
-
-
-
             }
             else if (collision.gameObject.name == "chrono(Clone)") //bonus temps
             {
@@ -122,6 +119,7 @@ public class Bateau_collision : MonoBehaviour
             if (nbVies <= 0)
             {
                 GameObject m = Instantiate(menuDefaite, transform.position, transform.rotation);
+                GameObject.Find("Score").GetComponent<TextMeshProUGUI>().text = "Votre bateau est cassé\nIl vous reste " + (poussinARamasser - nbPoussins) + " poussin(s) à trouver avant de rejoindre la ligne d'arrivée";
                 Destroy(gameObject);
                 GameObject.Find("Main Camera").GetComponent<FollowCam>().enabled = false;
             }

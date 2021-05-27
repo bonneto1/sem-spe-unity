@@ -492,7 +492,7 @@ GameObject:
   - component: {fileID: 1125541066529388837}
   - component: {fileID: 1125541066529388858}
   m_Layer: 0
-  m_Name: Bateau 1
+  m_Name: Bateau
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -592,10 +592,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d3ee06a4b175de47a240da255caba21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nbVies: 0
-  menuDefaite: {fileID: 8724583678681076103, guid: d8536c4c9cb36ad458716b0ab714ffed,
+  nbVies: 5
+  menuDefaite: {fileID: 9177651621897569405, guid: 0c4021be445cbf440817aafc3e1defd3,
     type: 3}
-  menuVictoire: {fileID: 2411392044587713338, guid: fb0819d802211c442abc4ad5e5345b6e,
+  menuVictoire: {fileID: 3626932457475722712, guid: c94b8ee591074854094d416197187e13,
     type: 3}
   poussinARamasser: 5
   poussin: {fileID: 7325897020818864827, guid: 20c09f9a379435943bced2e081add4ac, type: 3}
