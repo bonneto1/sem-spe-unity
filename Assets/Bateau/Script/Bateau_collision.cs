@@ -11,12 +11,9 @@ public class Bateau_collision : MonoBehaviour
     private float intervalTire;
     private float derniereTouche;
     private int nbPoussins;
-    private int yVie;
-    private int xVie;
 
     private List<int> xPoussin;
     private List<int> zPoussin;
-    private List<GameObject> ptnVie;
 
     [SerializeField]
     private int nbVies;
@@ -28,8 +25,6 @@ public class Bateau_collision : MonoBehaviour
     private int poussinARamasser;
     [SerializeField]
     private GameObject poussin;
-    [SerializeField]
-    private GameObject vie;
 
     // Start is called before the first frame update
     void Start()
@@ -40,7 +35,6 @@ public class Bateau_collision : MonoBehaviour
         nbPoussins = 0;
         GameObject.Find("CompteurPoussin").GetComponent<Text>().text = nbPoussins+"/"+poussinARamasser;
         GameObject.Find("ligne d'arrivee").GetComponent<BoxCollider>().enabled = false;
-        ptnVie = new List<GameObject>();
 
         if (gameObject.scene.name == "ZoneHerbe")
         {
@@ -66,18 +60,11 @@ public class Bateau_collision : MonoBehaviour
             xPoussin.RemoveAt(pos);
             zPoussin.RemoveAt(pos);
         }
-        yVie = 20;
-        xVie = 20;
-        for (int i = 0; i < nbVies; i++)
+        
+        for (int i = nbVies; i < 10; i++)
         {
-            GameObject v = Instantiate(vie);
-            v.transform.position.Set(i*40+xVie, -(i*40+yVie), 0);
-            if(i == 5)
-            {
-                yVie = 60;
-                xVie -= 180;
-            }
-            ptnVie.Add(v);
+            Debug.Log("PanelVie (" + i + ")");
+            GameObject.Find("PanelVie ("+i+")").GetComponent<Image>().color = new Color(255, 255, 255, 0);
         }
     }
 
@@ -105,15 +92,12 @@ public class Bateau_collision : MonoBehaviour
             {
                 nbVies += 1;
                 Destroy(collision.gameObject);
-                int nbPtnVie = ptnVie.Count;
-                if(nbPtnVie >= 5)
-                {
-                    yVie = 60;
-                    xVie -= 180;
-                }
-                GameObject v = Instantiate(vie);
-                v.transform.position.Set(nbPtnVie * 40 + 20, -(nbPtnVie * 40 + yVie), 0);
-                
+                GameObject.Find("PanelVie (" + (nbVies-1) + ")").GetComponent<Image>().color = new Color(255, 255, 255, 255);
+
+
+
+
+
             }
             else if (collision.gameObject.name == "chrono(Clone)") //bonus temps
             {
@@ -132,7 +116,7 @@ public class Bateau_collision : MonoBehaviour
         }
         else if (intervalTire <= Time.realtimeSinceStartup - derniereTouche && collision.gameObject.tag == "Obstacle")
         {
-            ////////////////////////////////////
+            
             nbVies--;
             if (nbVies <= 0)
             {
@@ -140,7 +124,7 @@ public class Bateau_collision : MonoBehaviour
                 Destroy(gameObject);
                 GameObject.Find("Main Camera").GetComponent<FollowCam>().enabled = false;
             }
-
+            GameObject.Find("PanelVie (" + nbVies + ")").GetComponent<Image>().color = new Color(255, 255, 255, 0);
             derniereTouche = Time.realtimeSinceStartup; 
 
         }
