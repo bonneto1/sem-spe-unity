@@ -57,6 +57,7 @@ public class Bateau_collision : MonoBehaviour
             for (int i = 0; i < poussinARamasser; i++)
             {
                 GameObject g = Instantiate(poussin);
+                Debug.Log("Poussin" + i);
                 g.transform.position = new Vector3(xPoussin[i], 3, zPoussin[i]);
             }
         }
