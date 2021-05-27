@@ -11,7 +11,10 @@ public class Bateau_collision : MonoBehaviour
     private float intervalTire;
     private float derniereTouche;
     private int nbPoussins;
-    
+
+    private List<int> xPoussin;
+    private List<int> zPoussin;
+
     [SerializeField]
     private int nbVies;
     [SerializeField]
@@ -20,6 +23,8 @@ public class Bateau_collision : MonoBehaviour
     private GameObject menuVictoire;
     [SerializeField]
     private int poussinARamasser;
+    [SerializeField]
+    private GameObject poussin;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +36,42 @@ public class Bateau_collision : MonoBehaviour
         GameObject.Find("CompteurPoussin").GetComponent<Text>().text = "Nombre de poussins ramassés :"+nbPoussins+"/"+poussinARamasser;
         GameObject.Find("ligne d'arrivee").GetComponent<BoxCollider>().enabled = false;
 
+        if (gameObject.scene.name == "ZoneHerbe")
+        {
+            xPoussin = new List<int> { 1, 49, 89, -10, -95 ,-45};
+            zPoussin = new List<int> { 45, 87, -28, -60, 35 ,119};
+            for (int i = 0; i < poussinARamasser; i++)
+            {
+                GameObject g = Instantiate(poussin);
+                Debug.Log("Poussin"+i);
+                int pos = (int)Random.Range(0, xPoussin.Count - 1);
+                g.transform.position = new Vector3(xPoussin[pos], 3, zPoussin[pos]);
+                xPoussin.RemoveAt(pos);
+                zPoussin.RemoveAt(pos);
+            }
+        }
+        else if (gameObject.scene.name == "ZoneNeige")
+        {
+            xPoussin = new List<int> { 0, 0, 0, 0, 0 };
+            zPoussin = new List<int> { 0, 0, 0, 0, 0 };
+            for (int i = 0; i < poussinARamasser; i++)
+            {
+                GameObject g = Instantiate(poussin);
+                g.transform.position = new Vector3(xPoussin[i], 3, zPoussin[i]);
+            }
+        }
+        else if (gameObject.scene.name == "ZoneCanyon")
+        {
+            xPoussin = new List<int> { 0, 0, 0, 0, 0 };
+            zPoussin = new List<int> { 0, 0, 0, 0, 0 };
+            for (int i = 0; i < poussinARamasser; i++)
+            {
+                GameObject g = Instantiate(poussin);
+                g.transform.position = new Vector3(xPoussin[i], 3, zPoussin[i]);
+            }
+        }
     }
+
 
     // Update is called once per frame
     void Update()

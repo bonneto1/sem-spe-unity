@@ -5,8 +5,8 @@ using UnityEngine;
 public class chargement : MonoBehaviour
 {
     private List<GameObject> listBonus;
-    private List<int> x;
-    private List<int> z;
+    private List<int> xBonus;
+    private List<int> zBonus;
     [SerializeField]
     private GameObject bonus1;
     //[SerializeField]
@@ -15,14 +15,14 @@ public class chargement : MonoBehaviour
     void Start()
     {
         listBonus = new List<GameObject>();
-        x = new List<int> { -50, 50, -50,-110,  10, 70,-10};
-        z = new List<int> { -80, 30, 100,  30,-100,-50,  0};
+        xBonus = new List<int> { -50, 50, -50,-110,  10, 70,-10};
+        zBonus = new List<int> { -80, 30, 100,  30,-100,-50,  0};
         listBonus.Add(bonus1);
         //listBonus.Add(bonus2);
-        for (int i = 0; i < 7; i++)
+        for (int i = 0; i < xBonus.Count; i++)
         {
             GameObject g = Instantiate(listBonus[(int)Random.Range(0, listBonus.Count - 1)]);
-            g.transform.position = new Vector3(x[i], 3, z[i]);
+            g.transform.position = new Vector3(xBonus[i], 3, zBonus[i]);
         }
     }
 
