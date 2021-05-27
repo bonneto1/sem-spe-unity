@@ -228,7 +228,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		{
 			if (collision.gameObject.tag == "Bonus")
 			{
-				if (collision.gameObject.name == "speed up")
+				if (collision.gameObject.name == "speed up(Clone)")
 				{
 					m_MovingTurnSpeed *= 2;
 					m_MoveSpeedMultiplier *= 2;

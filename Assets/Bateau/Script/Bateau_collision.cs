@@ -92,13 +92,15 @@ public class Bateau_collision : MonoBehaviour
     {
         if(collision.gameObject.tag == "Bonus")
         {
-            if (collision.gameObject.name == "coeur(Clone)")//hp up
+            if (collision.gameObject.name == "Heart(Clone)")//hp up
             {
                 nbVies += 1;
+                Destroy(collision.gameObject);
             }
             else if (collision.gameObject.name == "chrono(Clone)") //bonus temps
             {
                 GameObject.Find("Text").GetComponent<CountDownScript>().time += 10;
+                Destroy(collision.gameObject);
             }
             else if (collision.gameObject.name == "poussin(Clone)") // compteur de poussins
             {
@@ -106,8 +108,9 @@ public class Bateau_collision : MonoBehaviour
                 GameObject.Find("CompteurPoussin").GetComponent<Text>().text = "Nombre de poussins ramassés :" + nbPoussins + "/" + poussinARamasser;
                 if(nbPoussins == poussinARamasser)
                     GameObject.Find("ligne d'arrivee").GetComponent<BoxCollider>().enabled = true;
+                Destroy(collision.gameObject);
             }
-            Destroy(collision.gameObject);
+            
         }
         else if (intervalTire <= Time.realtimeSinceStartup - derniereTouche && collision.gameObject.tag == "Obstacle")
         {
