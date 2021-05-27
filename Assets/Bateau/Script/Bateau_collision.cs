@@ -18,6 +18,8 @@ public class Bateau_collision : MonoBehaviour
     private GameObject menuDefaite;
     [SerializeField]
     private GameObject menuVictoire;
+    [SerializeField]
+    private int poussinARamasser;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +28,9 @@ public class Bateau_collision : MonoBehaviour
         intervalTire = 3;
         derniereTouche = 0;
         nbPoussins = 0;
-        
+        GameObject.Find("CompteurPoussin").GetComponent<Text>().text = "Nombre de poussins ramassés :"+nbPoussins+"/"+poussinARamasser;
+
+
     }
 
     // Update is called once per frame
@@ -39,6 +43,7 @@ public class Bateau_collision : MonoBehaviour
             Destroy(gameObject);
             GameObject.Find("Main Camera").GetComponent<FollowCam>().enabled = false;
         }
+
     }
 
     
@@ -53,14 +58,16 @@ public class Bateau_collision : MonoBehaviour
             {
                 nbVies += 1;
             }
-            else if (collision.gameObject.name == "chrono") //bonus temps
+            else if (collision.gameObject.name == "chrono(Clone)") //bonus temps
             {
                 GameObject.Find("Text").GetComponent<CountDownScript>().time += 10;
                 Destroy(collision.gameObject);
             }
-            else if (collision.gameObject.name == "poussin") // compteur de poussins
+            else if (collision.gameObject.name == "poussin(Clone)") // compteur de poussins
             {
                 nbPoussins += 1;
+                Destroy(collision.gameObject);
+                GameObject.Find("CompteurPoussin").GetComponent<Text>().text = "Nombre de poussins ramassés :" + nbPoussins + "/" + poussinARamasser;
             }
         }
         else if (intervalTire <= Time.realtimeSinceStartup - derniereTouche && collision.gameObject.tag == "Obstacle")
