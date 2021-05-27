@@ -223,13 +223,14 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			}
 		}
 
-		private int time = 5;
+		private int time;
 		private void OnCollisionEnter(Collision collision)
 		{
 			if (collision.gameObject.tag == "Bonus")
 			{
 				if (collision.gameObject.name == "speed up(Clone)")
 				{
+					time = 10;
 					m_MovingTurnSpeed *= 2;
 					m_MoveSpeedMultiplier *= 2;
 					m_StationaryTurnSpeed *= 2;
