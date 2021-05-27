@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace UnityStandardAssets.Characters.ThirdPerson
@@ -220,6 +221,35 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				m_GroundNormal = Vector3.up;
 				m_Animator.applyRootMotion = false;
 			}
+		}
+
+		private int time = 5;
+		private void OnCollisionEnter(Collision collision)
+		{
+			if (collision.gameObject.tag == "Bonus")
+			{
+				if (collision.gameObject.name == "speed up")
+				{
+					m_MovingTurnSpeed *= 2;
+					m_MoveSpeedMultiplier *= 2;
+					m_StationaryTurnSpeed *= 2;
+					Destroy(collision.gameObject);
+					StartCoroutine(timer());
+				}
+			}
+		}
+		public IEnumerator timer()
+		{
+			while (time > 0)
+			{
+
+				time--;
+				yield return new WaitForSeconds(1f);
+
+			}
+			m_MovingTurnSpeed /= 2;
+			m_MoveSpeedMultiplier /= 2;
+			m_StationaryTurnSpeed /= 2;
 		}
 	}
 }

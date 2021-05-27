@@ -1025,17 +1025,17 @@ PrefabInstance:
     - target: {fileID: 6726439099598443021, guid: 622a64aa3bfbf3141a25cd5a864e9f81,
         type: 3}
       propertyPath: m_StationaryTurnSpeed
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6726439099598443021, guid: 622a64aa3bfbf3141a25cd5a864e9f81,
         type: 3}
       propertyPath: m_MoveSpeedMultiplier
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6726439099598443021, guid: 622a64aa3bfbf3141a25cd5a864e9f81,
         type: 3}
       propertyPath: m_MovingTurnSpeed
-      value: 100
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 6726439099598443021, guid: 622a64aa3bfbf3141a25cd5a864e9f81,
         type: 3}
@@ -2083,9 +2083,9 @@ MonoBehaviour:
   target: {fileID: 695188760}
   distance: 5
   height: 2.5
-  damping: 1
+  damping: 2
   smoothRotation: 1
-  rotationDamping: 1
+  rotationDamping: 4
 --- !u!1001 &1055154921
 PrefabInstance:
   m_ObjectHideFlags: 0
