@@ -40,36 +40,25 @@ public class Bateau_collision : MonoBehaviour
         {
             xPoussin = new List<int> {  1, 49,  89, -10, -95, -45, 118, -57,  -26, 40};
             zPoussin = new List<int> { 45, 87, -28, -60,  35, 119, -32,  88, -134, 62};
-            for (int i = 0; i < poussinARamasser; i++)
-            {
-                GameObject g = Instantiate(poussin);
-                Debug.Log("Poussin"+i);
-                int pos = (int)Random.Range(0, xPoussin.Count - 1);
-                g.transform.position = new Vector3(xPoussin[pos], 3, zPoussin[pos]);
-                xPoussin.RemoveAt(pos);
-                zPoussin.RemoveAt(pos);
-            }
         }
         else if (gameObject.scene.name == "ZoneNeige")
         {
             xPoussin = new List<int> { -102,  -7,  -59,  97,  -8,-115, -36, 99,   66,  47 };
             zPoussin = new List<int> {  -32, -73, -118, -32, 119,  15,  91, 52, -136, 127 };
-            for (int i = 0; i < poussinARamasser; i++)
-            {
-                GameObject g = Instantiate(poussin);
-                Debug.Log("Poussin" + i);
-                g.transform.position = new Vector3(xPoussin[i], 3, zPoussin[i]);
-            }
         }
         else if (gameObject.scene.name == "ZoneCanyon")
         {
             xPoussin = new List<int> { 0, 0, 0, 0, 0 };
             zPoussin = new List<int> { 0, 0, 0, 0, 0 };
-            for (int i = 0; i < poussinARamasser; i++)
-            {
-                GameObject g = Instantiate(poussin);
-                g.transform.position = new Vector3(xPoussin[i], 3, zPoussin[i]);
-            }
+        }
+        for (int i = 0; i < poussinARamasser; i++)
+        {
+            GameObject g = Instantiate(poussin);
+            int pos = (int)Random.Range(0, xPoussin.Count - 1);
+            g.transform.position = new Vector3(xPoussin[pos], 3, zPoussin[pos]);
+            Debug.Log("Poussin" + i+" pos x : "+xPoussin[pos]+" pos z : "+zPoussin[pos]);
+            xPoussin.RemoveAt(pos);
+            zPoussin.RemoveAt(pos);
         }
     }
 
