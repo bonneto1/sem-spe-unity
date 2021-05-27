@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ZoneHerbe.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/ZoneNeige.unity
+    guid: 650f76c1f78ee6545810ce9cee8debe9
   m_configObjects: {}

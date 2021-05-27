@@ -38,8 +38,8 @@ public class Bateau_collision : MonoBehaviour
 
         if (gameObject.scene.name == "ZoneHerbe")
         {
-            xPoussin = new List<int> { 1, 49, 89, -10, -95 ,-45};
-            zPoussin = new List<int> { 45, 87, -28, -60, 35 ,119};
+            xPoussin = new List<int> {  1, 49,  89, -10, -95, -45, 118, -57,  -26, 40};
+            zPoussin = new List<int> { 45, 87, -28, -60,  35, 119, -32,  88, -134, 62};
             for (int i = 0; i < poussinARamasser; i++)
             {
                 GameObject g = Instantiate(poussin);
@@ -52,8 +52,8 @@ public class Bateau_collision : MonoBehaviour
         }
         else if (gameObject.scene.name == "ZoneNeige")
         {
-            xPoussin = new List<int> { 0, 0, 0, 0, 0 };
-            zPoussin = new List<int> { 0, 0, 0, 0, 0 };
+            xPoussin = new List<int> { -102,  -7,  -59,  97,  -8,-115, -36, 99,   66,  47 };
+            zPoussin = new List<int> {  -32, -73, -118, -32, 119,  15,  91, 52, -136, 127 };
             for (int i = 0; i < poussinARamasser; i++)
             {
                 GameObject g = Instantiate(poussin);
