@@ -118,13 +118,13 @@ public class Bateau_collision : MonoBehaviour
         {
             
             nbVies--;
+            GameObject.Find("PanelVie (" + nbVies + ")").GetComponent<Image>().color = new Color(255, 255, 255, 0);
             if (nbVies <= 0)
             {
                 GameObject m = Instantiate(menuDefaite, transform.position, transform.rotation);
                 Destroy(gameObject);
                 GameObject.Find("Main Camera").GetComponent<FollowCam>().enabled = false;
             }
-            GameObject.Find("PanelVie (" + nbVies + ")").GetComponent<Image>().color = new Color(255, 255, 255, 0);
             derniereTouche = Time.realtimeSinceStartup; 
 
         }

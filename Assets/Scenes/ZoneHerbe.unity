@@ -462,7 +462,7 @@ PrefabInstance:
     - target: {fileID: 1125541066529388836, guid: 4fc404ba7ee0dcb44b68fc897157b139,
         type: 3}
       propertyPath: nbVies
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1125541066529388836, guid: 4fc404ba7ee0dcb44b68fc897157b139,
         type: 3}
