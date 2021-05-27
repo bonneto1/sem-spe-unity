@@ -95,6 +95,7 @@ public class Bateau_collision : MonoBehaviour
                 nbVies += 1;
                 Destroy(collision.gameObject);
                 GameObject.Find("PanelVie (" + (nbVies-1) + ")").GetComponent<Image>().color = new Color(255, 255, 255, 255);
+            
             }
             else if (collision.gameObject.name == "chrono(Clone)") //bonus temps
             {
@@ -109,7 +110,16 @@ public class Bateau_collision : MonoBehaviour
                     GameObject.Find("ligne d'arrivee").GetComponent<BoxCollider>().enabled = true;
                 Destroy(collision.gameObject);
             }
-            
+            if (collision.gameObject.name == "poussin(Clone)")
+            {
+                GameObject.Find("Audio Source Poussin").GetComponent<AudioSource>().Play();
+            }
+            else
+            {
+                GameObject.Find("Audio Source Bonus").GetComponent<AudioSource>().Play();
+            }
+
+
         }
         else if (intervalTire <= Time.realtimeSinceStartup - derniereTouche && collision.gameObject.tag == "Obstacle")
         {
@@ -123,8 +133,8 @@ public class Bateau_collision : MonoBehaviour
                 Destroy(gameObject);
                 GameObject.Find("Main Camera").GetComponent<FollowCam>().enabled = false;
             }
-            derniereTouche = Time.realtimeSinceStartup; 
-
+            derniereTouche = Time.realtimeSinceStartup;
+            GameObject.Find("Audio Source Choc").GetComponent<AudioSource>().Play();
         }
 
         else if(collision.gameObject.name == "ligne d'arrivee" && nbPoussins == poussinARamasser)
