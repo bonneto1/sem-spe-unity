@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ZoneNeige.unity
     guid: 650f76c1f78ee6545810ce9cee8debe9
+  - enabled: 1
+    path: Assets/Scenes/ZoneCanyon.unity
+    guid: 1b90bb23bc0fab44a8b6d316f5947746
   m_configObjects: {}
