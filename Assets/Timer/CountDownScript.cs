@@ -25,7 +25,7 @@ public class CountDownScript : MonoBehaviour
             GetComponent<Text>().text = "Temps restant : " + string.Format("{0:0}:{1:00}", Mathf.Floor(time / 60), time % 60);
 
         }
-            GetComponent<Text>().text = "Temps restant : 0:00";
-            GetComponent<CountDownScript>().enabled = false;
+        GetComponent<Text>().text = "Temps restant : 0:00";
+        GetComponent<CountDownScript>().enabled = false;
     }
 }
