@@ -57,14 +57,12 @@ public class Bateau_collision : MonoBehaviour
             GameObject g = Instantiate(poussin);
             int pos = (int)Random.Range(0, xPoussin.Count - 1);
             g.transform.position = new Vector3(xPoussin[pos], 3, zPoussin[pos]);
-            Debug.Log("Poussin" + i+" pos x : "+xPoussin[pos]+" pos z : "+zPoussin[pos]);
             xPoussin.RemoveAt(pos);
             zPoussin.RemoveAt(pos);
         }
         
         for (int i = nbVies; i < 10; i++)
         {
-            Debug.Log("PanelVie (" + i + ")");
             GameObject.Find("PanelVie ("+i+")").GetComponent<Image>().color = new Color(255, 255, 255, 0);
         }
     }

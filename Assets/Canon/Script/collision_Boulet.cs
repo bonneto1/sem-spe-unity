@@ -25,12 +25,10 @@ public class collision_Boulet : MonoBehaviour
         {
             if (collision.collider.name == "Plane")
             {
-                Debug.Log("Plouf");
                 Destroy(gameObject);
             }
             else
             {
-                Debug.Log("Boum");
                 GameObject e = Instantiate(explosion, transform.position, transform.rotation);
                 Destroy(gameObject);
                 if(collision.collider.name == "Bateau")

@@ -22,10 +22,12 @@ public class CountDownScript : MonoBehaviour
             
             time--;
             yield return new WaitForSeconds(1f);
+            if (!GameObject.Find("Main Camera").GetComponent<FollowCam>().enabled)
+                break;
             GetComponent<Text>().text = "Temps restant : " + string.Format("{0:0}:{1:00}", Mathf.Floor(time / 60), time % 60);
 
         }
-        GetComponent<Text>().text = "Temps restant : 0:00";
+        //GetComponent<Text>().text = "Temps restant : 0:00";
         GetComponent<CountDownScript>().enabled = false;
     }
 }
