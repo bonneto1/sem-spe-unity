@@ -31,7 +31,7 @@ public class Bateau_collision : MonoBehaviour
     void Start()
     {
         nbCollisions = 0;
-        intervalTire = 3;
+        intervalTire = 1.2;
         derniereTouche = 0;
         nbPoussins = 0;
         GameObject.Find("CompteurPoussin").GetComponent<Text>().text = nbPoussins+"/"+poussinARamasser;
@@ -99,7 +99,7 @@ public class Bateau_collision : MonoBehaviour
             }
             else if (collision.gameObject.name == "chrono(Clone)") //bonus temps
             {
-                GameObject.Find("Text").GetComponent<CountDownScript>().time += 10;
+                GameObject.Find("Text").GetComponent<CountDownScript>().time += 20;
                 Destroy(collision.gameObject);
             }
             else if (collision.gameObject.name == "poussin(Clone)") // compteur de poussins
