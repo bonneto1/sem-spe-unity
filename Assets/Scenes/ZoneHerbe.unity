@@ -1076,7 +1076,7 @@ PrefabInstance:
     - target: {fileID: 976427941629321403, guid: a86596ef49299634997217b09dffa9df,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 976427941629321403, guid: a86596ef49299634997217b09dffa9df,
         type: 3}
@@ -1145,7 +1145,7 @@ PrefabInstance:
     - target: {fileID: 1164915208816274037, guid: c4beeed95ded12549ae6ac1ec894c960,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1164915208816274037, guid: c4beeed95ded12549ae6ac1ec894c960,
         type: 3}
@@ -2139,7 +2139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 2382183111344081605}
-  distance: 5
+  distance: 6
   height: 3
   damping: 2
   smoothRotation: 1
@@ -2948,7 +2948,7 @@ PrefabInstance:
     - target: {fileID: 976427941629321403, guid: a86596ef49299634997217b09dffa9df,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 976427941629321403, guid: a86596ef49299634997217b09dffa9df,
         type: 3}
@@ -3437,7 +3437,7 @@ PrefabInstance:
     - target: {fileID: 976427941629321403, guid: a86596ef49299634997217b09dffa9df,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 976427941629321403, guid: a86596ef49299634997217b09dffa9df,
         type: 3}
