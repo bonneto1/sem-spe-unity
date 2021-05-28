@@ -64,7 +64,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Vous avez gagner
+  m_text: "Vous avez gagn\xE9"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_margin: {x: -113.80469, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 5010356975678469181}
-    characterCount: 16
+    characterCount: 15
     spriteCount: 0
     spaceCount: 2
     wordCount: 3
