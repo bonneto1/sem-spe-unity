@@ -31,7 +31,7 @@ public class Bateau_collision : MonoBehaviour
     void Start()
     {
         nbCollisions = 0;
-        intervalTire = 1.2;
+        intervalTire = 1.2f;
         derniereTouche = 0;
         nbPoussins = 0;
         GameObject.Find("CompteurPoussin").GetComponent<Text>().text = nbPoussins+"/"+poussinARamasser;
