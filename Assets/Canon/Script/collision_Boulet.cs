@@ -33,6 +33,10 @@ public class collision_Boulet : MonoBehaviour
                 Debug.Log("Boum");
                 GameObject e = Instantiate(explosion, transform.position, transform.rotation);
                 Destroy(gameObject);
+                if(collision.collider.name == "Bateau")
+                {
+                    GameObject.Find("Audio Source boulet-bateau").GetComponent<AudioSource>().Play();
+                }
             }
         }
     }
