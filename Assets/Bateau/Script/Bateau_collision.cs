@@ -81,6 +81,10 @@ public class Bateau_collision : MonoBehaviour
             Destroy(gameObject);
             GameObject.Find("Main Camera").GetComponent<FollowCam>().enabled = false;
         }
+        if(Input.GetKey(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
+        }
 
     }
 
