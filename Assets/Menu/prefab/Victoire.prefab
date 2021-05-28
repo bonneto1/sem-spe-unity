@@ -168,6 +168,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b0e514a64a30d342bc61a524f7521e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3093047354663465378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1050556819878320389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dda093fdce75f24d9c09d8526e4f680, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1066974195681364933
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,13 +798,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0.39896154, a: 0.5019608}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: fc502b3e1238c4d42822f291f633be95, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -958,18 +970,6 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &3093047354663465378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1050556819878320389}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dda093fdce75f24d9c09d8526e4f680, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6408100034712218479
 GameObject:
   m_ObjectHideFlags: 0
