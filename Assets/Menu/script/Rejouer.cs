@@ -21,7 +21,12 @@ public class Rejouer : MonoBehaviour
         }
         if (m_lance && !GetComponent<AudioSource>().isPlaying)
         {
+            if (gameObject.scene.name == "ZoneHerbe")
             SceneManager.LoadScene(1);
+            else if (gameObject.scene.name == "ZoneNeige")
+                SceneManager.LoadScene(2);
+            else if (gameObject.scene.name == "ZoneCanyon")
+                SceneManager.LoadScene(3);
         }
     }
 }
