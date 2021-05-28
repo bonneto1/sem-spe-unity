@@ -1,15 +1,15 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &579756897133781501
+--- !u!114 &1624328265142651631
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6469463782893043376}
+  m_GameObject: {fileID: 872295939116323645}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1a324bb27bc3dc47b8c9d9e8240b2f8, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b0e514a64a30d342bc61a524f7521e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2258428043890261612
@@ -135,6 +135,30 @@ MonoBehaviour:
       - m_Target: {fileID: 252242902587395533}
         m_MethodName: Play
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4474566797694539881, guid: f0d9c6cafdd789345a260fbbe6f44800,
+          type: 3}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 5509515367934706306, guid: 137f4012ce9c1724f90b8a0c193cdefa,
+          type: 3}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -274,18 +298,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5113196640071132265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6987066309253901046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dda093fdce75f24d9c09d8526e4f680, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4884811109542998473
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,18 +766,6 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &1624328265142651631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 872295939116323645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b0e514a64a30d342bc61a524f7521e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6022164446820733863
 GameObject:
   m_ObjectHideFlags: 0
@@ -897,6 +897,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &579756897133781501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6469463782893043376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1a324bb27bc3dc47b8c9d9e8240b2f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5113196640071132265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6987066309253901046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dda093fdce75f24d9c09d8526e4f680, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8275109228032252102
 GameObject:
   m_ObjectHideFlags: 0
@@ -1224,7 +1248,7 @@ GameObject:
   - component: {fileID: 8134745662490727260}
   - component: {fileID: 17366022851125839}
   m_Layer: 5
-  m_Name: Game over 1
+  m_Name: Game over
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
