@@ -44,7 +44,7 @@ public class Bateau_collision : MonoBehaviour
         }
         else if (gameObject.scene.name == "ZoneNeige")
         {
-            xPoussin = new List<int> { -102,  -7,  -59,  97,  -8,-115, -36, 99,   66,  47 };
+            xPoussin = new List<int> { -102,  -7,  -59,  99,  -8,-115, -36, 99,   66,  47 };
             zPoussin = new List<int> {  -32, -73, -118, -32, 119,  15,  91, 52, -136, 127 };
         }
         else if (gameObject.scene.name == "ZoneCanyon")
